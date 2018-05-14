@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+@font-face{
+	font-family: 'hy';
+	src: url('../font/HYHeiLiZhiTiJ.ttf')  format('truetype');
+}
+
+#choose {
+	overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/chooseBackground.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+}
+
+.courseWrapper{
+	overflow: hidden;
+	width: 82vw;
+	height: 65vh;
+	background: url(../img/border.png) no-repeat;
+	background-size: 100% 100%;
+	margin: 0 auto; 
+	margin-top: 17vh
+}
+
+.courseBoard{
+	width: 82%;
+	height: 85%;
+	margin: 7% 0 0vw 7.8vw;
+	overflow:scroll;
+}
+
+.course{
+	display: inline-block;
+	width: 9vw;
+	height: 10vw;
+	margin-top: 0.7vh;
+	margin-left: 1.7vw;
+	background: url(../img/course_0.png) no-repeat;
+	background-size: 100% 100%;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 4.5vw;
+	line-height: 10vw;
+	color: white;
+	font-family: 'hy';
+}
+
+
+.chooseBtnWrapper{
+	overflow: hidden;
+	margin-top: 4.3vh;
+	height: 11vw;
+}
+
+.btn{
+	display: inline-block;
+	width: 30vw;
+	height: 11vw;
+}
+
+.btn:first-child{
+	float: left;
+	background: url(../img/personal.png) no-repeat;
+	background-size: 100% auto;
+	margin-left: 8.5vw;
+}
+
+.btn:last-child{
+	float: right;
+	background: url(../img/back.png) no-repeat;
+	background-size: 100% auto;
+	margin-right: 8.9vw;
+}
+
+
+.btn:active{
+	width: 27vw;
+	height: 10vh;
+	margin-left: 9.6vw;
+	margin-right: 9.6vw;
+}

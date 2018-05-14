@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+	font-family: 'hy';
+	src: url('../font/HYHeiLiZhiTiJ.ttf')  format('truetype');
+}
+
+#course {
+	overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/course.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+}
+
+.topic{
+    width: 40vw;
+    height: 8vw;
+    margin: 0 auto;
+    margin-top: 4.4vh;
+    background: url(../img/qngzTitle.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.order{
+    width: 30vw;
+    height: 12vw;
+    margin: 0 auto;
+    /*margin-top: 4.4vh;*/
+    background: url(../img/first.png) no-repeat;
+    background-size: auto 100%;
+    background-position: 50% 0;
+}
+
+.contentWrapper{
+    overflow: hidden;
+    width: 83vw;
+    height: 63vh;
+    margin: 0.8vh auto;
+    background: url(../img/courseBoard.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.content{
+
+    width: 85%;
+    height: 82.5%;
+    margin: 5vw auto;
+    overflow:scroll;
+}
+
+.title{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4.5vw;
+    color: rgb(255, 129, 53);
+    word-break: break-all;
+    line-height: 6.3vw;
+}
+
+.mainContent{
+    padding: 1vh 2vw;
+    color: rgb(89, 162, 255);
+    font-size: 3.6vw;
+    line-height: 6vw;
+}
+
+.next{
+    width: 35vw;
+    height: 13vw;
+    background: url(../img/next.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 4.7vh auto;
+    font-size: 4.5vw;
+    color: white;
+    text-align: center;
+    line-height: 13vw;
+    font-family: 'hy';
+}
+
+.next:active{
+    width: 32vw;
+    height: 11vw;
+    margin-top: 5.3vh;
+    font-size: 3vw;
+}
