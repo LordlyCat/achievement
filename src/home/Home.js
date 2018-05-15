@@ -90,15 +90,15 @@ class ChoosePlate extends Component {
     }
 }
 
-// class Footer extends Component {
-//     render() {
-//         return (<div id="foot">
-//                     <p>@红岩网校工作站</p>
-//                 </div>)
-//     }
-// }
-
 class Index extends Component {
+    // constructor(props) {
+    //     super(props);
+    // }
+
+    componentDidMount() {
+
+    }
+
     render() {
         return (<div id="home">
                     <Prompt />
