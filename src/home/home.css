@@ -4,19 +4,48 @@
     box-sizing: content-box;
 }
 
-#root{
+/*#root {
     overflow: hidden;
     width: 100vw;
+    height: 0vh;
+    transition: width 1.2s, height 1.0s;
+    margin: 0 auto;
+}*/
+
+.root{
+    margin: 0 auto;
+    padding: 0 0;
+    width: 100vw;
     height: 100vh;
+    opacity: 0;
+}
+
+.rootQuit{
+    margin: 70% auto;
+    padding: 0 0;
+    width: 0vw;
+    height: 0vh;
+    background: pink;
+    opacity: 0;
+    transition: width 0.8s, height 0.8s, opacity 0.8s, margin 0.8s;
+}
+
+.roots {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition:  opacity 2.5s;
 }
 
 #home {
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: url(../img/background.png) no-repeat;
     background-size: 100% 100%;
     background-position: 0% 0%;
+    /*opacity: 0;*/
     /*margin-left: 110vw;
     transition: margin-left 1s;*/
 }
@@ -30,32 +59,32 @@
 }
 
 .prompt {
-    width: 8vw;
+    width: 8%;
     float: right;
     margin-right: 5vw;
     margin-top: 2.5vh;
 }
 
-.btnWrapper{
+.btnWrapper {
     overflow: hidden;
     margin-top: 48.3vh;
     height: 11vw;
 }
 
-.btnWrapper .btn{
+.btnWrapper .btn {
     display: inline-block;
     width: 30vw;
     height: 11vw;
 }
 
-.btnWrapper .btn:first-child{
+.btnWrapper .btn:first-child {
     float: left;
     background: url(../img/personal.png) no-repeat;
     background-size: 100% auto;
     margin-left: 8.5vw;
 }
 
-.btnWrapper .btn:last-child{
+.btnWrapper .btn:last-child {
     float: right;
     background: url(../img/class.png) no-repeat;
     background-size: 100% auto;
@@ -63,14 +92,14 @@
 }
 
 
-.btnWrapper .btn:active{
+.btnWrapper .btn:active {
     width: 27vw;
     height: 10vh;
     margin-left: 9.6vw;
     margin-right: 9.6vw;
 }
 
-.chooseWrapper{
+.chooseWrapper {
     position: relative;
     width: 84vw;
     height: 28vh;
@@ -78,47 +107,48 @@
     margin-top: 3vh;
 }
 
-.plateBox{
+.plateBox {
     display: inline-block;
     width: 26.86vw;
     height: 13vh;
     margin: 0.01vh 0.53vw;
 }
 
-.boxOne{
+.boxOne {
     background: url(../img/sjdbg.png) no-repeat;
     background-size: 100% 100%;
 }
 
-.boxTwo{
+.boxTwo {
     background: url(../img/sgqm.png) no-repeat;
     background-size: 100% 100%;
 }
 
-.boxThree{
+.boxThree {
     background: url(../img/zglsm.png) no-repeat;
     background-size: 100% 100%;
 }
 
-.boxFour{
+.boxFour {
     background: url(../img/qngz.png) no-repeat;
     background-size: 100% 100%;
 }
 
-.boxFive{
+.boxFive {
     background: url(../img/gsdg.png) no-repeat;
     background-size: 100% 100%;
 }
 
-.boxSix{
+.boxSix {
     background: url(../img/yxty.png) no-repeat;
     background-size: 100% 100%;
 }
-.plateBox:active{
+
+.plateBox:active {
     opacity: 0.4;
 }
 
-.cover{
+.cover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -127,22 +157,24 @@
     background-position: 50% 47%;
     top: 0;
     left: 0;
-    pointer-events:none;
+    pointer-events: none;
 }
 
-#foot{
+#foot {
     /*margin: 0 0;
     float: left;
     font-size: 12px;*/
 }
 
-#foot p{
+#foot p {
     margin: 0;
     font-size: 3.6vw;
     text-align: center;
     color: rgb(99, 180, 255);
     line-height: 6.6vh;
 }
+
+
 
 
 

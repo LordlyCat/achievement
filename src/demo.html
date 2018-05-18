@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>demo</title>
+    <style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+    }
+
+    .root {
+        margin: 80% auto;
+        padding: 0vh 0vh;
+        width: 00vw;
+        height: 00vh;
+        background: pink;
+	    opacity: 0;
+        transition:width 2s, height 2s, opacity 1s, margin 2s;
+    }
+
+    .roots {
+    	margin: 0 auto;
+        width: 100vw;
+        height: 100vh;
+        opacity: 1;
+        transition:width 2s, height 2s, opacity 1s, margin 2s;
+        background: pink;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="root">
+    </div>
+</body>
+
+<script>
+	var root = document.querySelector('.root');
+	setTimeout(function () {
+		root.className = 'roots';
+	}, 200);
+	document.onclick = function (e) {
+		e.target.className = 'root';
+	}
+</script>
+
+</html>

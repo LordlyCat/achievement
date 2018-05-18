@@ -17,7 +17,7 @@ import registerServiceWorker from './registerServiceWorker';
 // ReactDOM.render(<Achievement />, document.querySelector('#achievementBtn'));
 // ReactDOM.render(<ChoosePlate path="/choose" />, document.querySelector('#choosePlate'));
 // ReactDOM.render(<Footer />, document.querySelector('#foot'));
-
+let myRoot = document.querySelector('#root');
 ReactDOM.render(
     <Router>
         <Switch>
@@ -28,11 +28,13 @@ ReactDOM.render(
             <Route path="/classAchievement" component={ClassAchievement} />
         </Switch>
     </Router>,
-    document.querySelector('#root')
+    myRoot
 );
+// class Animation {
+//     static change() {
+//         myRoot.className = 'roots';
+//     }
+// }
 
-// let home = document.querySelector('#root');
-// setTimeout(() => {
-//     home.style.marginLeft = '0';
-// }, 200);
+
 registerServiceWorker();

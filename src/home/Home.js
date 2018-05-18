@@ -3,6 +3,7 @@ import React, {
 } from 'react';
 import './home.css';
 import prompt from '../img/prompt.png';
+import Animation from '../animation.js';
 
 class Prompt extends Component {
     constructor(props) {
@@ -29,13 +30,19 @@ class Achievement extends Component {
     }
 
     personalAchievementClick() {
-        //alert('Personal');
-        document.title = "我的成绩单";
-        window.location.href = 'http://localhost:3000/my'
+        Animation.quitPage();
+        setTimeout(() => {
+            document.title = "我的成绩单";
+            window.location.href = 'http://localhost:3000/myAchievement';
+        }, 600);
     }
 
     classAchievementClick() {
-        alert('Class');
+        Animation.quitPage();
+        setTimeout(() => {
+            document.title = "班级成绩单";
+            window.location.href = 'http://localhost:3000/classAchievement';
+        }, 600);
     }
 
     render() {
@@ -72,7 +79,10 @@ class ChoosePlate extends Component {
     }
 
     chooseClick(event) {
-        window.location.href = 'http://localhost:3000/choose';
+        Animation.quitPage();
+        setTimeout(() => {
+            window.location.href = 'http://localhost:3000/choose';
+        }, 600);
     }
 
     render() {
@@ -96,9 +106,10 @@ class Index extends Component {
     // }
 
     componentDidMount() {
-
+        setTimeout(() => {
+            document.querySelector('#root').className = 'roots';
+        }, 300);
     }
-
     render() {
         return (<div id="home">
                     <Prompt />

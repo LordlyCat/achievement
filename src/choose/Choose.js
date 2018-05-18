@@ -2,6 +2,7 @@ import React, {
     Component
 } from 'react';
 import './choose.css';
+import Animation from '../animation.js';
 
 class CourseContainer extends Component {
     render() {
@@ -20,8 +21,12 @@ class CourseList extends Component {
     }
 
     handleClick(e) {
+        Animation.quitPage();
         console.log(e.target.id);
-        window.location.href = 'http://localhost:3000/course';
+        setTimeout(() => {
+            //document.title = "我的成绩单";
+            window.location.href = 'http://localhost:3000/course';
+        }, 600);
     }
 
     render() {
@@ -45,11 +50,18 @@ class Buttons extends Component {
     }
 
     personalAchievementClick() {
-
+        Animation.quitPage();
+        setTimeout(() => {
+            document.title = "我的成绩单";
+            window.location.href = 'http://localhost:3000/myAchievement';
+        }, 600);
     }
 
     backClick() {
-        window.location.href = 'http://localhost:3000/index';
+        Animation.quitPage();
+        setTimeout(() => {
+            window.location.href = 'http://localhost:3000/index';
+        }, 600);
     }
 
     render() {
@@ -63,6 +75,11 @@ class Buttons extends Component {
 }
 
 class Choose extends Component {
+    componentDidMount() {
+        setTimeout(() => {
+            document.querySelector('#root').className = 'roots';
+        }, 300);
+    }
     render() {
         return (<div id="choose">
                     <CourseContainer />

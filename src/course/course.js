@@ -2,6 +2,7 @@ import React, {
     Component
 } from 'react';
 import './course.css';
+import Animation from '../animation.js';
 
 class Topic extends Component {
     render() {
@@ -102,6 +103,13 @@ class Course extends Component {
             content: ''
         }
     }
+
+    componentDidMount() {
+        setTimeout(() => {
+            document.querySelector('#root').className = 'roots';
+        }, 300);
+    }
+
     render() {
         return (<div id="course">
                     <Topic />
