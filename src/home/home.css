@@ -175,10 +175,55 @@
 }
 
 
+.popCover{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+}
 
+.unPopCover{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+}
 
+.popUps{
+    width: 73vw;
+    height: 71vw;
+    background: url(../img/pop.png) no-repeat;
+    background-size: 100% auto;
+    margin: 27vh auto;
+    padding: 14vw 9vw 5vw 9vw;
+}
 
+.popUps p{
+    text-align: center;
+    font-size: 4vw;
+    line-height: 9vw;
+    color: rgb(255, 163, 141);
+}
 
+.popUps p:first-child{
+    margin-top: 2vh;
+}
+
+.shutdown{
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+    background: url(../img/shutdown.png);
+    background-size: 100% 100%;
+    top: 33vh;
+    left: 76vw;
+}
 
 /*End
 */

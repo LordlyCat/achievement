@@ -5,16 +5,35 @@ import Animation from '../animation.js';
 import './myAchievement.css';
 
 class UserHead extends Component {
+    constructor() {
+        super();
+        this.continueStudy = this.continueStudy.bind(this);
+        this.goToClass = this.goToClass.bind(this);
+    }
+    continueStudy() {
+        Animation.quitPage();
+        setTimeout(() => {
+            window.location.href = 'http://www.lordlycat:3000/choose';
+        }, 600);
+    }
+    goToClass() {
+        Animation.quitPage();
+        setTimeout(() => {
+            window.location.href = 'http://www.lordlycat:3000/classAchievement';
+        }, 600);
+    }
     render() {
         return (<div className="userHead">
                     <div className="headImg">
                         <img src="" alt=""/>
                     </div>
-                    <p className="userName">00000000000</p>
-                    <p className="personalRank">个人总成绩排名：第<span>001</span>名</p>
+                    <p className="userName">红小岩</p>
+                    <p className="personalRank">个人总成绩排名：第<span>1</span>名</p>
                     <p className="GPA">当前学习绩点：<span>A+</span></p>
-                    <div className="continue"></div>
-                    <div className="classBtn"></div>
+                    <div className="myBtnWrapper">
+                        <div className="continue" onClick={this.continueStudy}></div>
+                        <div className="classBtn" onClick={this.goToClass}></div>
+                    </div>
                 </div>);
     }
 }
@@ -69,4 +88,7 @@ class MyAchievement extends Component {
     }
 }
 
-export default MyAchievement;
+export {
+    MyAchievement,
+    Rank
+};

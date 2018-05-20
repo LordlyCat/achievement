@@ -21,11 +21,11 @@ class CourseList extends Component {
     }
 
     handleClick(e) {
+        localStorage.setItem('course', e.target.id)
         Animation.quitPage();
-        console.log(e.target.id);
         setTimeout(() => {
             //document.title = "我的成绩单";
-            window.location.href = 'http://localhost:3000/course';
+            window.location.href = 'http://www.lordlycat:3000/course';
         }, 600);
     }
 
@@ -33,7 +33,7 @@ class CourseList extends Component {
         const number = this.props.number;
         const list = [];
         for (let i = 0; i < number; i++) {
-            list.push(<div className="course" key={i} id={i} onClick={this.handleClick}>{i + 1}</div>)
+            list.push(<div className="course" key={i} id={i + 1} onClick={this.handleClick}>{i + 1}</div>)
         }
 
         return (<ul>{list}</ul>)
@@ -53,14 +53,14 @@ class Buttons extends Component {
         Animation.quitPage();
         setTimeout(() => {
             document.title = "我的成绩单";
-            window.location.href = 'http://localhost:3000/myAchievement';
+            window.location.href = 'http://www.lordlycat:3000/myAchievement';
         }, 600);
     }
 
     backClick() {
         Animation.quitPage();
         setTimeout(() => {
-            window.location.href = 'http://localhost:3000/index';
+            window.location.href = 'http://www.lordlycat:3000/index';
         }, 600);
     }
 

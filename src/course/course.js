@@ -4,15 +4,32 @@ import React, {
 import './course.css';
 import Animation from '../animation.js';
 
+import sjdTitle from '../img/sjdTitle.png';
+import sgqmTitle from '../img/sgqmTitle.png';
+import zgmTitle from '../img/zgmTitle.png';
+import qngzTitle from '../img/qngzTitle.png';
+import gsdgTitle from '../img/gsdgTitle.png';
+
 class Topic extends Component {
+    constructor() {
+        super();
+        this.state = {
+            img: [sjdTitle, sgqmTitle, zgmTitle, qngzTitle, gsdgTitle],
+            index: localStorage.getItem('plate')
+        }
+
+    }
     render() {
-        return (<div className="topic"></div>);
+        return (<div className="topic">
+                    <img src={this.state.img[this.state.index]} alt=""/>
+                </div>);
     }
 }
 
 class Order extends Component {
+
     render() {
-        return (<div className="order"></div>)
+        return (<div className="order">第<span>{localStorage.getItem('course')}</span>课</div>)
     }
 }
 

@@ -16,12 +16,12 @@
     width: 78vw;
     height: 53.4vw;
     margin: 0 auto;
-    margin-top: 35vw;
+    margin-top: 34.5vw;
 }
 
 .userHead .headImg{
-    width: 16vw;
-    height: 16vw;
+    width: 15vw;
+    height: 15vw;
     margin: 0 auto;
     margin-top: 2vw;
     background: pink;
@@ -33,11 +33,12 @@
     font-size: 4.5vw;
     color: rgb(85, 170, 255);
     overflow: hidden;
+    margin-top: 1vw;
 }
 
 .personalRank, .GPA{
     text-align: center;
-    font-size: 4vw;
+    font-size: 3.62vw;
     color: rgb(255, 168, 55);
     font-family: 'hy';
     margin: 1.7vw 0;
@@ -47,22 +48,26 @@
     color: rgb(52, 187, 248);
 }
 
+.myBtnWrapper{
+    margin-top: 3.6vw;
+}
+
 .classBtn, .continue{
     display: inline-block;
-    width: 27vw;
+    width: 26vw;
     height: 12vw;
 }
 
 .classBtn{
     float: right;
-    margin-right: 6vw;
+    margin-right: 7vw;
     background: url(../img/class_1.png) no-repeat;
     background-size: 100% auto;
 }
 
 .continue{
     float: left;
-    margin-left: 6vw;
+    margin-left: 7vw;
     background: url(../img/continue.png) no-repeat;
     background-size: 100% auto;
 }
@@ -70,7 +75,7 @@
 .classBtn:active, .continue:active{
     width: 25vw;
     height: 10vw;
-    margin: 1vw 7vw;
+    margin: 1vw 8vw;
 }
 
 .rank{
