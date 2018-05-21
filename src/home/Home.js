@@ -24,7 +24,7 @@ class Achievement extends Component {
         Animation.quitPage();
         setTimeout(() => {
             document.title = "我的成绩单";
-            window.location.href = 'http:www.lordlycat:3000/myAchievement';
+            window.location.href = 'myAchievement';
         }, 600);
     }
 
@@ -32,7 +32,7 @@ class Achievement extends Component {
         Animation.quitPage();
         setTimeout(() => {
             document.title = "班级成绩单";
-            window.location.href = 'http:www.lordlycat:3000/classAchievement';
+            window.location.href = 'classAchievement';
         }, 600);
     }
 
@@ -67,6 +67,9 @@ class ChoosePlate extends Component {
     constructor(props) {
         super(props);
         this.chooseClick = this.chooseClick.bind(this);
+        if (!localStorage.getItem('plate')) {
+            localStorage.setItem('plate', 0);
+        }
     }
 
     chooseClick(event) {
@@ -80,7 +83,7 @@ class ChoosePlate extends Component {
         localStorage.setItem('plate', index);
         Animation.quitPage();
         setTimeout(() => {
-            window.location.href = 'http:www.lordlycat:3000/choose';
+            window.location.href = 'choose';
         }, 600);
     }
 

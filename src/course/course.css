@@ -19,8 +19,8 @@
 }
 
 .topic{
-    width: 40vw;
-    height: 10vw;
+    width: 48.5vw;
+    height: 11vw;
     margin: 0 auto;
     margin-top: 4.4vh;
     /*background: url(../img/sjdTitle.png) no-repeat;
@@ -33,14 +33,15 @@
 
 .order{
     width: 30vw;
-    height: 12vw;
+    height: 9vw;
     margin: 0 auto;
+    margin-top: 2vw;
     font-family: 'hy';
-    font-size: 6vw;
+    font-size: 7vw;
     color: white;
     text-align: center;
-    line-height: 12vw;
-    text-shadow: 0 0.16em 0.12em #f57b4f;
+    line-height: 9vw;
+    text-shadow: 0 0.14em 0.12em #f57b4f;
     /*margin-top: 4.4vh;*/
     /*background: url(../img/first.png) no-repeat;
     background-size: auto 100%;
@@ -68,17 +69,18 @@
     width: 80%;
     height: 8%;
     margin: 0 auto;
+    margin-top: 2.5vw;
     text-align: center;
-    font-size: 125%;
+    font-size: 3.8vw;
     color: rgb(255, 129, 53);
     word-break: break-all;
-    line-height: 6.3vw;
+    
 }
 
 .mainContent{
-    padding: 1vh 2vw;
+    padding:0 2vw 1vh 2vw;
     color: rgb(89, 162, 255);
-    font-size: 3.6vw;
+    font-size: 3.2vw;
     line-height: 6vw;
     text-indent:2em;
 }

@@ -25,7 +25,7 @@ class CourseList extends Component {
         Animation.quitPage();
         setTimeout(() => {
             //document.title = "我的成绩单";
-            window.location.href = 'http://www.lordlycat:3000/course';
+            window.location.href = 'course';
         }, 600);
     }
 
@@ -53,14 +53,14 @@ class Buttons extends Component {
         Animation.quitPage();
         setTimeout(() => {
             document.title = "我的成绩单";
-            window.location.href = 'http://www.lordlycat:3000/myAchievement';
+            window.location.href = 'myAchievement';
         }, 600);
     }
 
     backClick() {
         Animation.quitPage();
         setTimeout(() => {
-            window.location.href = 'http://www.lordlycat:3000/index';
+            window.location.href = 'index';
         }, 600);
     }
 

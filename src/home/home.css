@@ -67,7 +67,7 @@
 
 .btnWrapper {
     overflow: hidden;
-    margin-top: 48.3vh;
+    margin-top: 45.3vh;
     height: 11vw;
 }
 
@@ -102,7 +102,7 @@
 .chooseWrapper {
     position: relative;
     width: 84vw;
-    height: 28vh;
+    height: 30vh;
     margin: 0 auto;
     margin-top: 3vh;
 }
@@ -110,7 +110,7 @@
 .plateBox {
     display: inline-block;
     width: 26.86vw;
-    height: 13vh;
+    height: 14.3vh;
     margin: 0.01vh 0.53vw;
 }
 

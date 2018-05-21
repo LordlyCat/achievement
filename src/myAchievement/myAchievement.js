@@ -13,13 +13,13 @@ class UserHead extends Component {
     continueStudy() {
         Animation.quitPage();
         setTimeout(() => {
-            window.location.href = 'http://www.lordlycat:3000/choose';
+            window.location.href = 'choose';
         }, 600);
     }
     goToClass() {
         Animation.quitPage();
         setTimeout(() => {
-            window.location.href = 'http://www.lordlycat:3000/classAchievement';
+            window.location.href = 'classAchievement';
         }, 600);
     }
     render() {
