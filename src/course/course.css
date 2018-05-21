@@ -28,16 +28,18 @@
 }
 
 .topic img{
-    width: 100%;
+    display: block;
+    height: 100%;
+    margin: 0 auto;
 }
 
 .order{
     width: 30vw;
     height: 9vw;
     margin: 0 auto;
-    margin-top: 2vw;
+    margin-top: 3.1vw;
     font-family: 'hy';
-    font-size: 7vw;
+    font-size: 7.5vw;
     color: white;
     text-align: center;
     line-height: 9vw;
@@ -51,7 +53,7 @@
 .contentWrapper{
     overflow: hidden;
     width: 83%;
-    height: 63%;
+    height: 62%;
     margin: 0.8% auto;
     background: url(../img/courseBoard.png) no-repeat;
     background-size: 100% 100%;
