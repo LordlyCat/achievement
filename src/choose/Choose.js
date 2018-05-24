@@ -109,7 +109,7 @@ class CourseList extends Component {
                 }
             })
             if (!ifContinue) {
-                alert('每个话题每天只能学三课哦，温故知新，劳逸结合，学习更有效');
+                alert('每门课程每天只能学习三节课哦！快去复习已学课程吧，温故知新、学习更有效～');
                 return
             }
         }
@@ -137,7 +137,6 @@ class CourseList extends Component {
     }
 
 }
-
 
 class Buttons extends Component {
     constructor(props) {

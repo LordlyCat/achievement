@@ -50,27 +50,27 @@ class Rank extends Component {
                     </div>
                     <div className="rankBox plates">
                         <span></span>
-                        <span>{this.props.finished["report_19th"] + '/' + this.props.courseNumber["report_19th"]}</span>
+                        <span>{this.props.finished["report_19th"].slice(0, 4) + '/' + this.props.courseNumber["report_19th"]}</span>
                         <span>{"第" + this.props.rank["report_19th"] + "名"}</span>
                     </div>
                     <div className="rankBox plates">
                         <span></span>
-                        <span>{this.props.finished["four_comprehensives"] + '/' + this.props.courseNumber["four_comprehensives"]}</span>
+                        <span>{this.props.finished["four_comprehensives"].slice(0, 4) + '/' + this.props.courseNumber["four_comprehensives"]}</span>
                         <span>{"第" + this.props.rank["four_comprehensives"] + "名"}</span>
                     </div>
                     <div className="rankBox plates">
                         <span></span>
-                        <span>{this.props.finished["china_dream"] + '/' + this.props.courseNumber["china_dream"]}</span>
+                        <span>{this.props.finished["china_dream"].slice(0, 4) + '/' + this.props.courseNumber["china_dream"]}</span>
                         <span>{"第" + this.props.rank["china_dream"] + "名"}</span>
                     </div>
                     <div className="rankBox plates">
                         <span></span>
-                        <span>{this.props.finished["youth_work"] + '/' + this.props.courseNumber["youth_work"]}</span>
+                        <span>{this.props.finished["youth_work"].slice(0, 4) + '/' + this.props.courseNumber["youth_work"]}</span>
                         <span>{"第" + this.props.rank["youth_work"] + "名"}</span>
                     </div>
                     <div className="rankBox plates">
                         <span></span>
-                        <span>{this.props.finished["classic_stories"] + '/' + this.props.courseNumber["classic_stories"]}</span>
+                        <span>{this.props.finished["classic_stories"].slice(0, 4) + '/' + this.props.courseNumber["classic_stories"]}</span>
                         <span>{"第" + this.props.rank["classic_stories"] + "名"}</span>
                     </div>
                 </div>)

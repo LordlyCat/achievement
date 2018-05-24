@@ -53,6 +53,7 @@ class ChoosePlate extends Component {
     constructor(props) {
         super(props);
         this.chooseClick = this.chooseClick.bind(this);
+        this.goToGame = this.goToGame.bind(this);
         if (!localStorage.getItem('plate')) {
             localStorage.setItem('plate', 2);
         }
@@ -93,6 +94,11 @@ class ChoosePlate extends Component {
         }, 600);
     }
 
+    goToGame() {
+        console.log('game');
+        window.location.href = 'https://wx.idsbllp.cn/game/christmas-game2017/index.php/index/index/index';
+    }
+
     render() {
         return (<div id="choosePlate">
                     <div className="chooseWrapper">
@@ -101,7 +107,7 @@ class ChoosePlate extends Component {
                         <div className="plateBox boxThree" onClick={this.chooseClick}></div>
                         <div className="plateBox boxFour" onClick={this.chooseClick}></div>
                         <div className="plateBox boxFive" onClick={this.chooseClick}></div>
-                        <div className="plateBox boxSix"></div>
+                        <div className="plateBox boxSix" onClick={this.goToGame}></div>
                         <div className="cover"></div>
                     </div>
                 </div>)
