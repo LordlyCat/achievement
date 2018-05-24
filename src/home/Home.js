@@ -4,6 +4,7 @@ import React, {
 import './home.css';
 import prompt from '../img/prompt.png';
 import Animation from '../animation.js';
+import ajax from '../Ajax.js';
 
 class Prompt extends Component {
     render() {
@@ -19,6 +20,8 @@ class Achievement extends Component {
         this.personalAchievementClick = this.personalAchievementClick.bind(this);
         this.classAchievementClick = this.classAchievementClick.bind(this);
     }
+
+
 
     personalAchievementClick() {
         Animation.quitPage();
@@ -46,29 +49,12 @@ class Achievement extends Component {
     }
 }
 
-// class Plate extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.chooseClick = this.chooseClick.bind(this);
-//     }
-
-//     chooseClick(event) {
-
-//     }
-
-//     render() {
-//         return (<div className="plateBox">
-
-//                 </div>)
-//     }
-// }
-
 class ChoosePlate extends Component {
     constructor(props) {
         super(props);
         this.chooseClick = this.chooseClick.bind(this);
         if (!localStorage.getItem('plate')) {
-            localStorage.setItem('plate', 0);
+            localStorage.setItem('plate', 2);
         }
     }
 
@@ -77,6 +63,26 @@ class ChoosePlate extends Component {
         for (let i = 0; i < event.target.parentNode.children.length; i++) {
             if (event.target === event.target.parentNode.children[i]) {
                 index = i;
+                switch (index) {
+                    case 0:
+                        index = 2;
+                        break;
+                    case 1:
+                        index = 5;
+                        break;
+                    case 2:
+                        index = 3;
+                        break;
+                    case 3:
+                        index = 1;
+                        break;
+                    case 4:
+                        index = 4;
+                        break;
+                    default:
+                        // statements_def
+                        break;
+                }
                 break;
             }
         }
@@ -140,6 +146,41 @@ class Index extends Component {
     }
 
     componentDidMount() {
+        let openID = window.location.href.split('?')[1].split('=')[1];
+        //获取用户信息
+        ajax({
+            async: true,
+            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/User/getInfo',
+            method: 'POST',
+            data: 'openid=' + openID,
+            header: 'application/x-www-form-urlencoded',
+            success: (data) => {
+                localStorage.setItem('userInformation', data);
+            }
+        })
+        //获取课程数量
+        ajax({
+            async: true,
+            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/index/getCourseList',
+            method: 'GET',
+            data: null,
+            header: 'application/x-www-form-urlencoded',
+            success: (data) => {
+                localStorage.setItem('courseNumber', data);
+            }
+        })
+        //获取排行榜数据
+        ajax({
+            async: true,
+            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/User/getPersonalRank',
+            method: 'POST',
+            data: `openid=${openID}`,
+            header: 'application/x-www-form-urlencoded',
+            success: (data) => {
+                localStorage.setItem('rank', data);
+            }
+        })
+
         setTimeout(() => {
             document.querySelector('#root').className = 'roots';
         }, 300);

@@ -19,7 +19,7 @@
 }
 
 .topic{
-    width: 48.5vw;
+    width: 55vw;
     height: 11vw;
     margin: 0 auto;
     margin-top: 4.4vh;
@@ -43,7 +43,7 @@
     color: white;
     text-align: center;
     line-height: 9vw;
-    text-shadow: 0 0.14em 0.12em #f57b4f;
+    text-shadow: 0 0.1em 0em #f57b4f;
     /*margin-top: 4.4vh;*/
     /*background: url(../img/first.png) no-repeat;
     background-size: auto 100%;
@@ -69,14 +69,14 @@
 
 .title{
     width: 80%;
-    height: 8%;
+    /*height: 8%;*/
     margin: 0 auto;
     margin-top: 2.5vw;
     text-align: center;
     font-size: 3.8vw;
     color: rgb(255, 129, 53);
     word-break: break-all;
-    
+    font-weight: bold;
 }
 
 .mainContent{
@@ -95,7 +95,7 @@
     margin: 0 auto;
     margin-top: 3vh;
     margin-bottom: 5vh;
-    font-size: 4.5vw;
+    font-size: 3.8vw;
     color: white;
     text-align: center;
     line-height: 13vw;

@@ -42,14 +42,22 @@
     height: 10vw;
     margin-top: 0.7vh;
     margin-left: 1.7vw;
-    background: url(../img/course_0.png) no-repeat;
-    background-size: 100% 100%;
     border-radius: 50%;
     text-align: center;
     font-size: 4.5vw;
     line-height: 10vw;
     color: white;
     font-family: 'hy';
+}
+
+.unfinished{
+    background: url(../img/course_0.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.finished{
+    background: url(../img/course_1.png) no-repeat;
+    background-size: 100% 100%;
 }
 
 

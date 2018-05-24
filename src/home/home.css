@@ -195,13 +195,26 @@
     background: rgba(0, 0, 0, 0.75);
 }
 
-.popUps{
+.popUps, .courseFinished, .plateFinished{
     width: 73vw;
     height: 71vw;
-    background: url(../img/pop.png) no-repeat;
-    background-size: 100% auto;
     margin: 27vh auto;
     padding: 14vw 9vw 5vw 9vw;
+}
+
+.popUps{
+    background: url(../img/pop.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.courseFinished{
+    background: url(../img/congratulation_0.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.plateFinished{
+    background: url(../img/congratulation_1.png) no-repeat;
+    background-size: 100% auto;
 }
 
 .popUps p{

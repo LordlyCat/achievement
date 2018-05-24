@@ -10,7 +10,6 @@ import ClassAchievement from './classAchievement/classAchievement.js';
 import {
     BrowserRouter as Router,
     Route,
-    //Link,
     Switch
 } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
@@ -21,7 +20,7 @@ import registerServiceWorker from './registerServiceWorker';
 // ReactDOM.render(<Footer />, document.querySelector('#foot'));
 let myRoot = document.querySelector('#root');
 ReactDOM.render(
-    <Router>
+    <Router basename="/achievement">
         <Switch>
             <Route path="/index" component={Index} />
             <Route path="/choose" component={Choose} />
@@ -45,6 +44,5 @@ if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
     opened.opener = null;
     opened.close();
 }
-
 
 registerServiceWorker();
