@@ -14,10 +14,6 @@ import {
 } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
-// ReactDOM.render(<Prompt />, document.querySelector('#prompt'));
-// ReactDOM.render(<Achievement />, document.querySelector('#achievementBtn'));
-// ReactDOM.render(<ChoosePlate path="/choose" />, document.querySelector('#choosePlate'));
-// ReactDOM.render(<Footer />, document.querySelector('#foot'));
 let myRoot = document.querySelector('#root');
 ReactDOM.render(
     <Router basename="">
@@ -31,11 +27,6 @@ ReactDOM.render(
     </Router>,
     myRoot
 );
-// class Animation {
-//     static change() {
-//         myRoot.className = 'roots';
-//     }
-// }
 
 var useragent = navigator.userAgent;
 if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {

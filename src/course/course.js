@@ -41,12 +41,12 @@ class Content extends Component {
         let data = JSON.parse(localStorage.getItem('courseContent'));
     }
     componentDidUpdate() {
-        document.querySelector('.content').scrollTop = 0;
+        this.refs.top.scrollTop = 0;
     }
 
     render() {
         return (<div className="contentWrapper">
-                    <div className="content">
+                    <div className="content" ref="top">
                         <div className="title">{this.props.title}</div>
                         <p className="mainContent">{this.props.content[0]}</p>
                         <p className="mainContent">{this.props.content[1]}</p>
