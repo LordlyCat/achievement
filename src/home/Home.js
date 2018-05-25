@@ -158,7 +158,18 @@ class Index extends Component {
     }
 
     componentDidMount() {
-        let openID = window.location.href.split('?')[1].split('=')[1];
+        let openID = null;
+        if (!sessionStorage.getItem('openid')) {
+            openID = window.location.href.split('?')[1].split('=')[1];
+        } else {
+            openID = sessionStorage.getItem('openid');
+        }
+        sessionStorage.setItem('openid', openID);
+
+        window.history.pushState({
+            openid: 'getted'
+        }, 'index', '#/index');
+
         //获取用户信息
         ajax({
             async: true,
