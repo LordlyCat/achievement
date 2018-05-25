@@ -38,27 +38,10 @@ class Order extends Component {
 class Content extends Component {
     constructor(props) {
         super(props);
-        // ajax({
-        //     async: false,
-        //     url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/index/getCourseContent',
-        //     method: 'POST',
-        //     data: {
-        //         part: 2,
-        //         course: 2
-        //     },
-        //     success: (data) => {
-        //         console.log(data);
-        //         this.state = {
-        //             title: data.data[0]["title"],
-        //             content: data.data[0]["title"]
-        //         }
-        //     }
-        // })
         let data = JSON.parse(localStorage.getItem('courseContent'));
-        // this.state = {
-        //     title: data.data[0]["title"],
-        //     content: data.data[0]["content"]
-        // }
+    }
+    componentDidUpdate() {
+        document.querySelector('.content').scrollTop = 0;
     }
 
     render() {
@@ -335,9 +318,6 @@ class Course extends Component {
                 })
             }
         }
-
-
-
     }
 
     count() {
