@@ -134,6 +134,7 @@ class NextBtn extends Component {
         }
     }
 
+    //  提交验证
     sendFinished(data) {
         ajax({
             async: true,
