@@ -119,7 +119,8 @@ class NextBtn extends Component {
             let part = localStorage.getItem('plate');
             let course = localStorage.getItem('course');
 
-            if (localStorage.getItem('courseClassName') === 'course unfinished') {
+            if (localStorage.getItem('courseClassName') === 'course unfinished' &&
+                this.state.inner !== '继续学习') {
                 this.sendFinished(`openid=${openid}&part=${part}&course=${course}&s=${s}&m=${m}&r=${r}`);
             }
 
