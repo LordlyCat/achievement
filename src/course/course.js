@@ -142,6 +142,7 @@ class NextBtn extends Component {
             data: data,
             header: 'application/x-www-form-urlencoded',
             success: (data) => {
+                console.log(JSON.parse(data));
                 if (JSON.parse(data).status !== 200) {
                     alert("提交失败！");
                 }
