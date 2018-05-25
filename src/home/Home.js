@@ -32,6 +32,12 @@ class Achievement extends Component {
     }
 
     classAchievementClick() {
+        let user = JSON.parse(localStorage.getItem('userInformation')).data;
+        if (user["class"].toString() === '0') {
+            alert(`温馨提示：
+                还未加入班级哦！快去重邮小帮手绑定个人信息吧～`);
+            return;
+        }
         Animation.quitPage();
         setTimeout(() => {
             document.title = "班级成绩单";

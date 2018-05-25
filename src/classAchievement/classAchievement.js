@@ -30,6 +30,10 @@ class ClassHead extends Component {
     render() {
         let rankObj = JSON.parse(localStorage.getItem('rank')).data;
         let user = JSON.parse(localStorage.getItem('userInformation')).data;
+        if (user["class"].toString() === '0') {
+            alert(`温馨提示：
+                还未加入班级哦！快去重邮小帮手绑定个人信息吧～`);
+        }
         return (<div className="userHead">
                     <div className="headImg">
                         <img src={user["headimg_url"]} alt=""/>
@@ -76,6 +80,7 @@ class classAchievement extends Component {
     }
 
     componentDidMount() {
+        document.title = "班级成绩单";
         setTimeout(() => {
             document.querySelector('#root').className = 'roots';
         }, 300);

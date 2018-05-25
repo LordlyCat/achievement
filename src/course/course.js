@@ -125,7 +125,10 @@ class NextBtn extends Component {
             }
 
             if (this.state.inner === '继续学习') {
-                window.location.href = 'choose';
+                Animation.quitPage();
+                setTimeout(() => {
+                    window.location.href = 'choose';
+                }, 600);
             } else {
                 this.props.show();
             }

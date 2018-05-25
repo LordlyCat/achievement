@@ -19,6 +19,12 @@ class UserHead extends Component {
         }, 600);
     }
     goToClass() {
+        let user = JSON.parse(localStorage.getItem('userInformation')).data;
+        if (user["class"].toString() === '0') {
+            alert(`温馨提示：
+                还未加入班级哦！快去重邮小帮手绑定个人信息吧～`);
+            return;
+        }
         Animation.quitPage();
         setTimeout(() => {
             window.location.href = 'classAchievement';
@@ -106,6 +112,7 @@ class MyAchievement extends Component {
         })
     }
     componentDidMount() {
+        document.title = "我的成绩单";
         setTimeout(() => {
             document.querySelector('#root').className = 'roots';
         }, 300);
