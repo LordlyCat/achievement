@@ -37,4 +37,4 @@ if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
     opened.close();
 }
 
-registerServiceWorker();
+//registerServiceWorker();
