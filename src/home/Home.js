@@ -27,7 +27,7 @@ class Achievement extends Component {
         Animation.quitPage();
         setTimeout(() => {
             document.title = "我的成绩单";
-            window.location.href = 'myAchievement';
+            window.location.href = '#myAchievement';
         }, 600);
     }
 
@@ -41,7 +41,7 @@ class Achievement extends Component {
         Animation.quitPage();
         setTimeout(() => {
             document.title = "班级成绩单";
-            window.location.href = 'classAchievement';
+            window.location.href = '#classAchievement';
         }, 600);
     }
 
@@ -96,7 +96,7 @@ class ChoosePlate extends Component {
         localStorage.setItem('plate', index);
         Animation.quitPage();
         setTimeout(() => {
-            window.location.href = 'choose';
+            window.location.href = '#choose';
         }, 600);
     }
 

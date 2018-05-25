@@ -8,7 +8,7 @@ import {
 } from './myAchievement/myAchievement.js';
 import ClassAchievement from './classAchievement/classAchievement.js';
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Route,
     Switch
 } from 'react-router-dom';
@@ -20,7 +20,7 @@ import registerServiceWorker from './registerServiceWorker';
 // ReactDOM.render(<Footer />, document.querySelector('#foot'));
 let myRoot = document.querySelector('#root');
 ReactDOM.render(
-    <Router basename="/achievement">
+    <Router basename="">
         <Switch>
             <Route path="/index" component={Index} />
             <Route path="/choose" component={Choose} />

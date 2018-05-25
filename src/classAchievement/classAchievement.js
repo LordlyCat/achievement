@@ -18,13 +18,13 @@ class ClassHead extends Component {
     continueStudy() {
         Animation.quitPage();
         setTimeout(() => {
-            window.location.href = 'choose';
+            window.location.href = '#choose';
         }, 600);
     }
     goToMy() {
         Animation.quitPage();
         setTimeout(() => {
-            window.location.href = 'myAchievement';
+            window.location.href = '#myAchievement';
         }, 600);
     }
     render() {

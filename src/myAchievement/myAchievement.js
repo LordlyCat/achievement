@@ -15,7 +15,7 @@ class UserHead extends Component {
     continueStudy() {
         Animation.quitPage();
         setTimeout(() => {
-            window.location.href = 'choose';
+            window.location.href = '#choose';
         }, 600);
     }
     goToClass() {
@@ -27,7 +27,7 @@ class UserHead extends Component {
         }
         Animation.quitPage();
         setTimeout(() => {
-            window.location.href = 'classAchievement';
+            window.location.href = '#classAchievement';
         }, 600);
     }
     render() {
