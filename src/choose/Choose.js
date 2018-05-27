@@ -117,11 +117,10 @@ class CourseList extends Component {
         localStorage.setItem('courseClassName', e.target.className);
         Animation.quitPage();
         setTimeout(() => {
-            //document.title = "我的成绩单";
+            document.title = '课程学习';
             window.location.href = '#course';
         }, 600);
     }
-
     render() {
         const finished = this.props.finished;
         const courseNumber = this.props.courseNumber;
@@ -148,7 +147,7 @@ class Buttons extends Component {
     personalAchievementClick() {
         Animation.quitPage();
         setTimeout(() => {
-            //document.title = "我的成绩单";
+            document.title = "我的成绩单";
             window.location.href = '#myAchievement';
         }, 600);
     }
@@ -156,6 +155,7 @@ class Buttons extends Component {
     backClick() {
         Animation.quitPage();
         setTimeout(() => {
+            document.title = '青年学习成绩单';
             window.location.href = '#index?openid=' + JSON.parse(localStorage.getItem('userInformation')).data.openid;
         }, 600);
     }

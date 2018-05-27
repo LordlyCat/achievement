@@ -96,12 +96,12 @@ class ChoosePlate extends Component {
         localStorage.setItem('plate', index);
         Animation.quitPage();
         setTimeout(() => {
+            document.title = '课程选择';
             window.location.href = '#choose';
         }, 600);
     }
 
     goToGame() {
-        console.log('game');
         window.location.href = 'https://wx.idsbllp.cn/game/christmas-game2017/index.php/index/index/index';
     }
 

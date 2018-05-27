@@ -15,6 +15,7 @@ class UserHead extends Component {
     continueStudy() {
         Animation.quitPage();
         setTimeout(() => {
+            document.title = '课程选择';
             window.location.href = '#choose';
         }, 600);
     }
@@ -27,6 +28,7 @@ class UserHead extends Component {
         }
         Animation.quitPage();
         setTimeout(() => {
+            document.title = '班级成绩单';
             window.location.href = '#classAchievement';
         }, 600);
     }

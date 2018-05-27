@@ -18,12 +18,14 @@ class ClassHead extends Component {
     continueStudy() {
         Animation.quitPage();
         setTimeout(() => {
+            document.title = '课程选择';
             window.location.href = '#choose';
         }, 600);
     }
     goToMy() {
         Animation.quitPage();
         setTimeout(() => {
+            document.title = '我的成绩单';
             window.location.href = '#myAchievement';
         }, 600);
     }
@@ -32,7 +34,7 @@ class ClassHead extends Component {
         let user = JSON.parse(localStorage.getItem('userInformation')).data;
         if (user["class"].toString() === '0') {
             alert(`温馨提示：
-                还未加入班级哦！快去重邮小帮手绑定个人信息吧～`);
+            还未加入班级哦！快去重邮小帮手绑定个人信息吧～`);
         }
         return (<div className="userHead">
                     <div className="headImg">

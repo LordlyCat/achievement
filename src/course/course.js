@@ -110,6 +110,7 @@ class NextBtn extends Component {
             if (this.state.inner === '继续学习') {
                 Animation.quitPage();
                 setTimeout(() => {
+                    document.title = '课程选择';
                     window.location.href = '#choose';
                 }, 600);
             } else {
