@@ -92,11 +92,12 @@ class NextBtn extends Component {
                 disabled: false
             });
 
-            let m = localStorage.getItem('count') - 1;
+            let count = localStorage.getItem('count');
+            let m = parseInt(count, 10) - 1;
             m = MD5(m.toString(), 32);
-            let s = parseInt(localStorage.getItem('count')) + 1;
+            let s = parseInt(count, 10) + 1;
             s = MD5(s.toString(), 32);
-            let r = localStorage.getItem('count');
+            let r = count;
 
             let openid = JSON.parse(localStorage.getItem('userInformation')).data.openid;
             let part = localStorage.getItem('plate');
