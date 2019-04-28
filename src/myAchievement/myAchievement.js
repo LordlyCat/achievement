@@ -58,11 +58,6 @@ class Rank extends Component {
                         
                     </div>
                     <div className="rankBox plates">
-                        <span>重庆讲话精神</span>
-                        <span>{this.props.finished["xi_speech"].slice(0, 4) + '/' + this.props.courseNumber["classic_stories"]}</span>
-                        <span>{"第" + this.props.rank["xi_speech"] + "名"}</span>
-                    </div>
-                    <div className="rankBox plates">
                         <span>十九大报告</span>
                         <span>{this.props.finished["report_19th"].slice(0, 4) + '/' + this.props.courseNumber["report_19th"]}</span>
                         <span>{"第" + this.props.rank["report_19th"] + "名"}</span>
