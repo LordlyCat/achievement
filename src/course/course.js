@@ -356,6 +356,9 @@ class Course extends Component {
     }
 
     render() {
+        //<Congratuulation 
+        //className={this.state.className}
+        //shutdown={this.shutdown}/>
         return (<div id="course">
                     <Topic />
                     <Order />
@@ -367,9 +370,7 @@ class Course extends Component {
                     finished={this.state.finished}
                     show={this.showPopUps}
                     length={this.state.length}/>
-                    <Congratuulation 
-                    className={this.state.className}
-                    shutdown={this.shutdown}/>
+                    
                 </div>)
     }
 }

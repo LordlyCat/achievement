@@ -72,8 +72,8 @@ class CourseList extends Component {
     }
 
     handleClick(e) {
-        let openid = 'ouRCyjhan0KtTLbEBqdpEgfdWYZI';
-        //let openid = JSON.parse(localStorage.getItem('userInformation')).data.openid;
+        //let openid = 'ouRCyjhan0KtTLbEBqdpEgfdWYZI';
+        let openid = JSON.parse(localStorage.getItem('userInformation')).data.openid;
         if (e.target.className == 'course unfinished') {
             localStorage.setItem('course', e.target.id);
             if (e.target.id > 1 && e.target.previousSibling.className !== 'course finished') {
@@ -119,7 +119,7 @@ class CourseList extends Component {
                     }
                 }
             })
-            if (!ifContinue) {
+            if (false) { //!ifContinue
                 alert('每门课程每天只能学习三节课哦！快去复习已学课程吧，温故知新、学习更有效～');
                 return
             }
