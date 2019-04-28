@@ -171,11 +171,11 @@ class Index extends Component {
     componentDidMount() {
         let openID = null;
         if (!sessionStorage.getItem('openid')) {
-            openID = 'ouRCyjhan0KtTLbEBqdpEgfdWYZI';
-            //openID = window.location.href.split('?')[1].split('=')[1];
+            //openID = 'ouRCyjhan0KtTLbEBqdpEgfdWYZI';
+            openID = window.location.href.split('?')[1].split('=')[1];
         } else {
-            openID = 'ouRCyjhan0KtTLbEBqdpEgfdWYZI'
-            //openID = sessionStorage.getItem('openid');
+            //openID = 'ouRCyjhan0KtTLbEBqdpEgfdWYZI'
+            openID = sessionStorage.getItem('openid');
         }
         sessionStorage.setItem('openid', openID);
 
