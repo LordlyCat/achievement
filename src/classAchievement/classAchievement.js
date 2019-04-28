@@ -60,7 +60,7 @@ class classAchievement extends Component {
         //获取用户信息
         ajax({
             async: false,
-            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/User/getInfo',
+            url: 'https://wx.idsbllp.cn/game/youth_report2019/index.php/Home/User/getInfo',
             method: 'POST',
             data: 'openid=' + openID,
             header: 'application/x-www-form-urlencoded',
@@ -71,7 +71,7 @@ class classAchievement extends Component {
         //获取排行榜数据
         ajax({
             async: true,
-            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/User/getPersonalRank',
+            url: 'https://wx.idsbllp.cn/game/youth_report2019/index.php/Home/User/getPersonalRank',
             method: 'POST',
             data: `openid=${openID}`,
             header: 'application/x-www-form-urlencoded',

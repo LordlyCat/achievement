@@ -45,12 +45,22 @@ class Achievement extends Component {
         }, 600);
     }
 
+    newX_click = () => {
+        localStorage.setItem('plate', 6);
+        Animation.quitPage();
+        setTimeout(() => {
+            document.title = '课程选择';
+            window.location.href = '#newX';
+        }, 600);
+    }
+
     render() {
         return (<div id="achievementBtn">
                     <div className="btnWrapper">
                         <div className="btn" onClick={this.personalAchievementClick}></div>
                         <div className="btn" onClick={this.classAchievementClick}></div>
                     </div>
+                    <div className="newLink" onClick={this.newX_click}>习近平总书记视察重庆重要讲话精神</div>
                 </div>);
     }
 }
@@ -66,6 +76,7 @@ class ChoosePlate extends Component {
     }
 
     chooseClick(event) {
+        console.log('clickkkkkkkkkk')
         let index = 0;
         for (let i = 0; i < event.target.parentNode.children.length; i++) {
             if (event.target === event.target.parentNode.children[i]) {
@@ -160,9 +171,11 @@ class Index extends Component {
     componentDidMount() {
         let openID = null;
         if (!sessionStorage.getItem('openid')) {
-            openID = window.location.href.split('?')[1].split('=')[1];
+            openID = 'ouRCyjhan0KtTLbEBqdpEgfdWYZI';
+            //openID = window.location.href.split('?')[1].split('=')[1];
         } else {
-            openID = sessionStorage.getItem('openid');
+            openID = 'ouRCyjhan0KtTLbEBqdpEgfdWYZI'
+            //openID = sessionStorage.getItem('openid');
         }
         sessionStorage.setItem('openid', openID);
 
@@ -173,29 +186,33 @@ class Index extends Component {
         //获取用户信息
         ajax({
             async: true,
-            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/User/getInfo',
+            url: 'https://wx.idsbllp.cn/game/youth_report2019/index.php/Home/User/getInfo',
             method: 'POST',
             data: 'openid=' + openID,
             header: 'application/x-www-form-urlencoded',
             success: (data) => {
+
                 localStorage.setItem('userInformation', data);
+                console.log('user', localStorage.getItem('userInformation'))
             }
         })
         //获取课程数量
         ajax({
             async: true,
-            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/index/getCourseList',
+            url: 'https://wx.idsbllp.cn/game/youth_report2019/index.php/Home/Index/getCourseList',
+            //url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/index/getCourseList',
             method: 'GET',
             data: null,
             header: 'application/x-www-form-urlencoded',
             success: (data) => {
+                console.log('ccccc', data)
                 localStorage.setItem('courseNumber', data);
             }
         })
         //获取排行榜数据
         ajax({
             async: true,
-            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/User/getPersonalRank',
+            url: 'https://wx.idsbllp.cn/game/youth_report2019/index.php/Home/User/getPersonalRank',
             method: 'POST',
             data: `openid=${openID}`,
             header: 'application/x-www-form-urlencoded',

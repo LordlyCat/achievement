@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Index from './home/Home.js';
 import Choose from './choose/Choose.js';
 import Course from './course/course.js';
+import NewX from './newX/newX.js'
 
 import {
     MyAchievement
@@ -24,6 +25,8 @@ ReactDOM.render(
             <Route path="/course" component={Course} />
             <Route path="/myAchievement" component={MyAchievement} />
             <Route path="/classAchievement" component={ClassAchievement} />
+            <Route path="/newX" component={NewX} />
+
         </Switch>
     </Router>,
     myRoot

@@ -52,35 +52,42 @@ class UserHead extends Component {
 
 class Rank extends Component {
     render() {
+        console.log(this.props.finished)
         return (<div className="rank">
                     <div className="rankBox rankTitle">
                         
                     </div>
                     <div className="rankBox plates">
-                        <span></span>
+                        <span>重庆讲话精神</span>
+                        <span>{this.props.finished["xi_speech"].slice(0, 4) + '/' + this.props.courseNumber["classic_stories"]}</span>
+                        <span>{"第" + this.props.rank["xi_speech"] + "名"}</span>
+                    </div>
+                    <div className="rankBox plates">
+                        <span>十九大报告</span>
                         <span>{this.props.finished["report_19th"].slice(0, 4) + '/' + this.props.courseNumber["report_19th"]}</span>
                         <span>{"第" + this.props.rank["report_19th"] + "名"}</span>
                     </div>
                     <div className="rankBox plates">
-                        <span></span>
+                        <span>“四个全面”</span>
                         <span>{this.props.finished["four_comprehensives"].slice(0, 4) + '/' + this.props.courseNumber["four_comprehensives"]}</span>
                         <span>{"第" + this.props.rank["four_comprehensives"] + "名"}</span>
                     </div>
                     <div className="rankBox plates">
-                        <span></span>
+                        <span>“中国梦”</span>
                         <span>{this.props.finished["china_dream"].slice(0, 4) + '/' + this.props.courseNumber["china_dream"]}</span>
                         <span>{"第" + this.props.rank["china_dream"] + "名"}</span>
                     </div>
                     <div className="rankBox plates">
-                        <span></span>
+                        <span>“青年工作”</span>
                         <span>{this.props.finished["youth_work"].slice(0, 4) + '/' + this.props.courseNumber["youth_work"]}</span>
                         <span>{"第" + this.props.rank["youth_work"] + "名"}</span>
                     </div>
                     <div className="rankBox plates">
-                        <span></span>
+                        <span>故事典故</span>
                         <span>{this.props.finished["classic_stories"].slice(0, 4) + '/' + this.props.courseNumber["classic_stories"]}</span>
                         <span>{"第" + this.props.rank["classic_stories"] + "名"}</span>
                     </div>
+                    
                 </div>)
     }
 }
@@ -93,7 +100,7 @@ class MyAchievement extends Component {
         //获取用户信息
         ajax({
             async: false,
-            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/User/getInfo',
+            url: 'https://wx.idsbllp.cn/game/youth_report2019/index.php/Home/User/getInfo',
             method: 'POST',
             data: 'openid=' + openID,
             header: 'application/x-www-form-urlencoded',
@@ -104,7 +111,7 @@ class MyAchievement extends Component {
         //获取排行榜数据
         ajax({
             async: true,
-            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/User/getPersonalRank',
+            url: 'https://wx.idsbllp.cn/game/youth_report2019/index.php/Home/User/getPersonalRank',
             method: 'POST',
             data: `openid=${openID}`,
             header: 'application/x-www-form-urlencoded',

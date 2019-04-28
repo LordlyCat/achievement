@@ -77,6 +77,19 @@
     height: 11vw;
 }
 
+.newLink{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #539aff;
+    background: #daf3fa;
+    width: 83%;
+    border-radius: 5%;
+    margin-top: 1vh;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
 .btnWrapper .btn:first-child {
     float: left;
     background: url(../img/personal.png) no-repeat;
@@ -104,7 +117,7 @@
     width: 84vw;
     height: 30vh;
     margin: 0 auto;
-    margin-top: 3vh;
+    margin-top: 1vh;
 }
 
 .plateBox {

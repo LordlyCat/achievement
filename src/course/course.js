@@ -128,7 +128,7 @@ class NextBtn extends Component {
         ajax({
             async: true,
             method: 'POST',
-            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/User/completeClass',
+            url: 'https://wx.idsbllp.cn/game/youth_report2019/index.php/Home/User/completeClass',
             data: data,
             header: 'application/x-www-form-urlencoded',
             success: (data) => {
@@ -204,7 +204,7 @@ class Course extends Component {
         ajax({
             async: false,
             method: 'POST',
-            url: 'https://wx.idsbllp.cn/game/youth_report/index.php/Home/index/getCourseContent',
+            url: 'https://wx.idsbllp.cn/game/youth_report2019/index.php/Home/index/getCourseContent',
             data: `part=${plate}&course=${course}`,
             header: 'application/x-www-form-urlencoded',
             success: function(data) {
@@ -212,6 +212,7 @@ class Course extends Component {
             }
         })
         let contentObj = JSON.parse(localStorage.getItem('courseContent')).data;
+
         if (plate === 4) {
             this.state = {
                 length: contentObj.length,
@@ -222,6 +223,7 @@ class Course extends Component {
                 content: [contentObj[0]["content1"], contentObj[0]["content2"], contentObj[0]["content3"]]
             }
         } else {
+            console.log('contentObj', JSON.parse(localStorage.getItem('plate')));
             this.state = {
                 length: contentObj.length,
                 className: 'unPopCover',

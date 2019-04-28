@@ -30,10 +30,17 @@
 
 .courseBoard{
     width: 82%;
-    height: 85%;
+    height: 82%;
     /*margin: 7% 0 0vw 7.8%;*/
     margin: 7% auto;
+    margin-bottom: 0;
     overflow:scroll;
+}
+
+.newT{
+    text-align: center;
+    font-size: 10px;
+    color: lightblue;
 }
 
 .course{

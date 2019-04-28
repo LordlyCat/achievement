@@ -1,7 +1,7 @@
 #classAchievement{
     overflow: hidden;
     width: 100%;
-    height: 209.9vw;
+    height: 203.9vw;
     background: url(../img/classBackground.png) no-repeat;
     background-size: 100% auto;
 }
@@ -11,7 +11,7 @@
 }
 
 #classAchievement .userHead{
-    height: 65.8vw;
+    height: 63.8vw;
 }
 
 .classBtnWrapper .classBtn{
